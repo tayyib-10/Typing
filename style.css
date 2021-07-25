@@ -1,0 +1,54 @@
+body {
+  font-size: 15pt;
+  background-color: palevioletred;
+}
+
+
+.container {
+  background-color: palevioletred;
+  display: flex;
+  height: 10%;
+}
+
+.cursor {
+  background-color: palevioletred;
+  border: 2px solid black;
+  position: absolute;
+  width: 90%;
+  height: 9%;
+  z-index: 2;
+  border-color: palevioletred;
+  border-left-color: red;
+  animation-name: blinkCursor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes blinkCursor {
+  0% {
+    margin-left: 0px;
+    border-left-color: transparent;
+  }
+  
+  25% {
+    border-left-color: red;
+    margin-left: 110px;
+  }
+  
+  
+  50% {
+    margin-left: 220px;
+    border-left: transparent;
+  }
+  
+  75% {
+    margin-left: 110px;
+    border-left-color: red;
+  }
+  
+  100% {
+    margin-left: 0px;
+    border-left-color: transparent;
+  }
+}
